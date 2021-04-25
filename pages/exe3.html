@@ -12,28 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
 
-    <script>
-
-        function areaResultado() {
-            
-            document.getElementById("resultado").style.display="block";
-            calcularVolume();
-
-        }
-
-        function calcularVolume() {
-            
-            const pi = 3.14159;
-            var raio = document.forms["form"]["raio"].value;
-            var altura = document.forms["form"]["altura"].value;
-
-            var volume = pi * (parseFloat(raio) * parseFloat(raio)) * altura;
-
-            document.getElementById("areaResult").innerHTML=volume.toFixed(2);    
-
-        }
-
-    </script>
+    <script src="js/exe3.js"></script>
 
 </head>
 <body>

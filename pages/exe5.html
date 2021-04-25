@@ -12,28 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
 
-    <script>
-
-        function areaResultado() {
-            
-            document.getElementById("resultado").style.display="block";
-            calcularConversao();
-
-        }
-
-        function calcularConversao() {
-            
-            var mm = document.forms["form"]["mm"].value;
-            var mm_p = 25.4;
-
-            var pol = parseFloat(mm) / mm_p;
-
-            document.getElementById("areaResult1").innerHTML=mm;
-            document.getElementById("areaResult2").innerHTML=pol.toFixed(2);
-
-        }
-
-    </script>
+    <script src="js/exe5.js"></script>
 
 </head>
 <body>

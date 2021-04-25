@@ -12,28 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
 
-    <script>
-
-        function areaResultado() {
-            
-            document.getElementById("resultado").style.display="block";
-            calcularPrestacao();
-
-        }
-
-        function calcularPrestacao() {
-            
-            var valorP = parseFloat(document.forms["form"]["valorP"].value);
-            var valorTaxa = parseFloat(document.forms["form"]["valorTaxa"].value);
-            var tempo = parseInt(document.forms["form"]["valorTaxa"].value);
-
-            var prestacao = valorP + (valorP * (valorTaxa/100) * tempo);
-
-            document.getElementById("result").innerHTML=prestacao;
-
-        }
-
-    </script>
+    <script src="js/exe7.js"></script>
 
 </head>
 <body>
