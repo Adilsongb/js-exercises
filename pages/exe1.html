@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01 - JS</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+
+    <script>
+
+        function areaResultado(){
+
+            document.getElementById('tabelaResult').style.display='block';
+            calculandoMedia();
+
+        }
+
+        function calculandoMedia() {
+
+            var n1 = document.forms["form"]["nota1"].value;
+            var n2 = document.forms["form"]["nota2"].value;
+
+
+
+            var media = (parseFloat(n1) + parseFloat(n2))/2;
+
+            document.getElementById("dado1").innerHTML = n1;
+            document.getElementById("dado2").innerHTML = n2;
+            document.getElementById("dado3").innerHTML = media;
+
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <br>
+        <a class="botao botao2" href="../index.html">Voltar</a>
+        <h1>Exercício 1</h1>
+
+        <p>Elaborar um algoritmo para calcular a média aritmética de duas notas escolares de um aluno e
+        escrever as notas e a média calculada.</p>
+
+        <form name="form" class="conteudo">
+            
+            <label for="nota1">Primeira nota:</label>
+            <input type="text" name="nota1" id="nota1">
+
+            <label for="nota2">Segunda nota:</label>
+            <input type="text" name="nota2" id="nota2">
+
+            <button type="button" class="submit" onclick="areaResultado()">Calcular</button>
+
+        </form>
+        
+        <br>
+
+        <table id="tabelaResult" style="width: 25%; margin: auto; display: none;">
+            <tr>
+                <th>Primeira nota</th>
+                <td id="dado1">0</td>
+            </tr>
+            <tr>
+                <th>Segunda nota</th>
+                <td id="dado2">0</td>
+            </tr>
+            <tr>
+                <th>Média</th>
+                <td id="dado3">0</td>
+            </tr>
+        </table>
+        
+        <br>
+
+    </div>
+    
+</body>
+</html>

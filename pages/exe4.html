@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04 - JS</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+
+    <script>
+
+        function areaResultado() {
+            
+            document.getElementById("resultado").style.display="block";
+            calcularTemperatura();
+
+        }
+
+        function calcularTemperatura() {
+            
+            var tempC = document.forms["form"]["tempC"].value;
+
+            var tempF = (parseFloat(tempC) * (9/5)) + 32;
+
+            document.getElementById("areaResult1").innerHTML=parseFloat(tempC);
+            document.getElementById("areaResult2").innerHTML=tempF;
+            
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <br>
+        <a class="botao botao2" href="../index.html">Voltar</a>
+        <h1>Exercício 4</h1>
+
+        <p>
+            Elaborar um algoritmo que leia uma temperatura dada na escala Celcius (C) e imprimir o valor 
+            na escala Fahrenheit (F). Utilize a fórmula °F=(°C∗(9/5))+32
+        </p>
+
+        <form name="form" class="conteudo">
+            
+            <label for="tempC">Temperatura em Celsius:</label>
+            <input type="text" name="tempC" id="tempC">
+
+            <button type="button" class="submit" onclick="areaResultado()">Calcular</button>
+
+        </form>
+        
+        <br>
+
+        <div class="resultado" id="resultado" style="display: none;">
+
+           <span id="areaResult1"></span> °C = <span id="areaResult2"></span> °F
+
+        </div>
+
+        <br>
+
+    </div>
+    
+</body>
+</html>

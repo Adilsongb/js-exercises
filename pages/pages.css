@@ -1,0 +1,101 @@
+.botao2 {
+
+    margin-top: 20px;
+    margin-left: 0;
+    font-weight: bold;
+    background-color: rgb(205, 255, 176);
+
+}
+
+.botao2:hover {
+
+    background-color: rgb(134, 255, 128);
+
+}
+
+div.container {
+
+    border-left: 5px solid rgb(205, 255, 176);
+
+}
+
+form.conteudo {
+
+    width: 20%;
+    margin: auto;
+
+}
+
+input {
+
+    display: block;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    border-style: none;
+    border-radius: 2px;
+    border: 1px solid rgb(204, 204, 204);
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+input:focus{
+
+   outline: none; 
+   border: 1px solid rgb(204, 204, 204);
+
+}
+
+button.submit {
+
+    width: 100%;
+    border: none;
+    margin: auto;
+    padding: 10px 10px;
+    border-radius: 5px;
+    background-color: rgb(164, 255, 195);
+    cursor: pointer;
+
+}
+
+
+table {
+
+    background-color: rgb(230, 230, 230);
+    border-radius: 5px;
+    border-collapse: collapse;
+
+}
+
+th {
+
+    text-align: left;
+    padding: 5px;
+    width: 90%;
+
+}
+
+td {
+
+    text-align: center;
+    border-left: 1px solid white;
+    padding: 5px 10px;
+
+}
+
+div.resultado {
+
+    background-color: rgb(230, 230, 230);
+    margin: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    max-width: 30%;
+    border-radius: 10px;
+    text-align: center;
+
+}

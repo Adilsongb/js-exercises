@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03 - JS</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+
+    <script>
+
+        function areaResultado() {
+            
+            document.getElementById("resultado").style.display="block";
+            calcularVolume();
+
+        }
+
+        function calcularVolume() {
+            
+            const pi = 3.14159;
+            var raio = document.forms["form"]["raio"].value;
+            var altura = document.forms["form"]["altura"].value;
+
+            var volume = pi * (parseFloat(raio) * parseFloat(raio)) * altura;
+
+            document.getElementById("areaResult").innerHTML=volume.toFixed(2);    
+
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <br>
+        <a class="botao botao2" href="../index.html">Voltar</a>
+        <h1>Exercício 3</h1>
+
+        <p>
+            Elaborar um algoritmo para calcular e apresentar o volume (V) de um cilindro, tendo como
+            valores informados o raio (R) e a altura (A). Utilize π = 3.14159 e V = πR<sup>2</sup>A para realizar o cálculo.
+        </p>
+
+        <form name="form" class="conteudo">
+            
+            <label for="raio">Raio do cilindro:</label>
+            <input type="text" name="raio" id="raio">
+
+            <label for="altura">Altura do cilindro:</label>
+            <input type="text" name="altura" id="altura">
+
+            <button type="button" class="submit" onclick="areaResultado()">Calcular</button>
+
+        </form>
+        
+        <br>
+
+        <div class="resultado" id="resultado" style="display: none;">
+
+           <strong>O volume do cilindro é: </strong> <span id="areaResult"></span>
+
+        </div>
+
+        <br>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 08 - JS</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+
+    <script>
+        // Variaveis
+        var quantHamb = 0;
+        var quantChe = 0;
+        var quantMilk = 0;
+        var quantRef = 0;
+
+        // Variaveis de valores
+        var vH, vC, vM, vR;
+        var valorTotal = 0;
+
+        // ADD E RETIRAR ITEM
+
+        function retirarItem(item) {
+            
+            //Hamburguer
+            if (item == 1) {
+                
+                quantHamb -= 1;
+                document.getElementById("quantidadeH").innerHTML=quantHamb;
+
+                if (quantHamb == 0) {
+
+                document.getElementById("retirarBotaoH").style.visibility = "hidden";
+
+                }
+
+            }
+
+            //Cheeseburguer
+            if (item == 2) {
+                
+                quantChe -= 1;
+                document.getElementById("quantidadeC").innerHTML=quantChe;
+
+                if (quantChe == 0) {
+
+                document.getElementById("retirarBotaoC").style.visibility = "hidden";
+
+                }
+
+            }
+
+            //MilkShake
+            if (item == 3) {
+                
+                quantMilk -= 1;
+                document.getElementById("quantidadeM").innerHTML=quantMilk;
+
+                if (quantMilk == 0) {
+
+                document.getElementById("retirarBotaoM").style.visibility = "hidden";
+
+                }
+
+            }
+
+            //Refrigerante
+            if (item == 4) {
+                
+                quantRef -= 1;
+                document.getElementById("quantidadeR").innerHTML=quantRef;
+
+                if (quantRef == 0) {
+
+                document.getElementById("retirarBotaoR").style.visibility = "hidden";
+
+                }
+
+            }
+
+        }
+        
+        function addItem(item) {
+            
+            //Hamburguer
+            if (item == 1) {
+                
+                quantHamb += 1;
+                document.getElementById("quantidadeH").innerHTML=quantHamb;
+                document.getElementById("retirarBotaoH").style.visibility = "visible";
+
+            }
+
+            //Cheeseburguer
+            if (item == 2) {
+                
+                quantChe += 1;
+                document.getElementById("quantidadeC").innerHTML=quantChe;
+                document.getElementById("retirarBotaoC").style.visibility = "visible";
+
+            }
+
+            //MilkShake
+            if (item == 3) {
+                
+                quantMilk += 1;
+                document.getElementById("quantidadeM").innerHTML=quantMilk;
+                document.getElementById("retirarBotaoM").style.visibility = "visible";
+
+            }
+
+            //Refrigerante
+            if (item == 4) {
+                
+                quantRef += 1;
+                document.getElementById("quantidadeR").innerHTML=quantRef;
+                document.getElementById("retirarBotaoR").style.visibility = "visible";
+
+            }
+
+        }
+
+        //Calculo do total a pagar
+
+        function calcularTotal() {
+
+            document.getElementById("resultado").style.display="block";
+
+            vH = quantHamb * 12.50;
+            vC = quantChe * 13.30;
+            vM = quantMilk * 8.00;
+            vR = quantRef * 5.00;
+
+            valorTotal = vH + vC + vM + vR;
+
+            document.getElementById("result").innerHTML=valorTotal.toFixed(2);
+            
+        }
+
+    </script>
+
+    <style>
+
+        #pedido {
+
+            margin: auto;
+            background-color: beige;
+            width: 30%;
+
+        }
+
+        th#titulo {
+
+            text-align: center;
+            background-color: rgb(193, 255, 177);
+            border-radius: 5px 5px 0 0;
+            font-size: 20px;
+            padding: 10px;
+
+        }
+
+        th {
+
+            padding: 20px;
+
+        }
+
+        td {
+
+            border-style: none;
+
+        }
+
+        .botaoCard {
+
+            background-color: rgb(255, 255, 255);
+            border-radius: 20%;
+            border: none;
+            width: 25px;
+            padding: 5px;
+            font-size: 20px;
+            text-align: center;
+            color: rgb(125, 199, 135);
+            cursor: pointer;
+
+        }
+
+        .botaoCard:hover {
+
+            background-color: rgb(125, 199, 135);
+            color: rgb(255, 255, 255);
+
+        }
+
+        .botaoCard:focus {
+
+            outline: none;
+
+        }
+
+        .botaoEnviar {
+
+            background-color: rgb(162, 251, 174);
+            outline: none;
+            border: none;
+            width: 30%;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+
+        @media screen and (max-width: 800px){
+
+            .botaoEnviar {
+
+                min-width: 80%;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <br>
+        <a class="botao botao2" href="../index.html">Voltar</a>
+        <h1>Exercício 8</h1>
+
+        <p>
+            Preparar um algoritmo para ler a quantidade de itens comprados e calcular e apresentar a conta do
+            cliente.
+        </p>
+
+        <ul>
+            <li>1 Hambúrguer = R$ 12,50</li>
+            <li>1 Cheeseburguer = R$ 13,30</li>
+            <li>1 MilkShake = R$ 8,00</li>
+            <li>1 Refrigerante = R$ 5,00</li>
+        </ul>
+
+        <table id="pedido">
+            <tr>
+                <th id="titulo" colspan="4">Faça o seu pedido</th>
+            </tr>
+            <tr>
+                <th>Hambúrguer</th>
+                <td>
+                    <button type="button" class="botaoCard" id="retirarBotaoH" style="visibility: hidden;" onclick="retirarItem(1)">-</button>
+                </td>
+                <td>
+                    <span id="quantidadeH">0</span>
+                </td>
+                <td>
+                    <button type="button" class="botaoCard" onclick="addItem(1)" >+</button>
+                </td>
+            </tr>
+            <tr>
+                <th>Cheeseburguer</th>
+                <td>
+                    <button type="button" class="botaoCard" id="retirarBotaoC" style="visibility: hidden;" onclick="retirarItem(2)">-</button>
+                </td>
+                <td>
+                    <span id="quantidadeC">0</span>
+                </td>
+                <td>
+                    <button type="button" class="botaoCard" onclick="addItem(2)" >+</button>
+                </td>
+            </tr>
+            <tr>
+                <th>MilkShake</th>
+                <td>
+                    <button type="button" class="botaoCard" id="retirarBotaoM" style="visibility: hidden;" onclick="retirarItem(3)">-</button>
+                </td>
+                <td>
+                    <span id="quantidadeM">0</span>
+                </td>
+                <td>
+                    <button type="button" class="botaoCard" onclick="addItem(3)" >+</button>
+                </td>
+            </tr>
+            <tr>
+                <th>Refrigerante</th>
+                <td>
+                    <button type="button" class="botaoCard" id="retirarBotaoR" style="visibility: hidden;" onclick="retirarItem(4)">-</button>
+                </td>
+                <td>
+                    <span id="quantidadeR">0</span>
+                </td>
+                <td>
+                    <button type="button" class="botaoCard" onclick="addItem(4)" >+</button>
+                </td>
+            </tr>
+        </table>
+
+        <button class="botaoEnviar" style="margin: 10px auto; display: block;" onclick="calcularTotal()">Enviar pedido</button>
+
+        <div class="resultado" id="resultado" style="display: none;">
+
+            Total a pagar: R$ <span id="result"></span>
+ 
+        </div>
+
+        <br>
+
+    </div>
+    
+</body>
+</html>

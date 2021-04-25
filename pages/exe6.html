@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06 - JS</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+
+    <script>
+
+        function areaResultado() {
+            
+            document.getElementById("resultado").style.display="block";
+            calcularOperacoes();
+
+        }
+
+        function calcularOperacoes() {
+            
+            var valorA = parseInt(document.forms["form"]["valorA"].value);
+            var valorB = parseInt(document.forms["form"]["valorB"].value);
+
+            var x = document.getElementsByClassName("valorA");
+            var y = document.getElementsByClassName("valorB");
+
+            for (var i = 0; i < x.length && i < y.length; i++) {
+                
+                x[i].innerHTML=valorA;
+                y[i].innerHTML=valorB;       
+
+            }
+
+            document.getElementById("adicao").innerHTML=valorA + valorB;
+
+            document.getElementById("subtracao").innerHTML=valorA - valorB;
+
+            document.getElementById("multiplicacao").innerHTML=valorA * valorB;
+
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <br>
+        <a class="botao botao2" href="../index.html">Voltar</a>
+        <h1>Exercício 6</h1>
+
+        <p>
+            Elaborar um algoritmo para ler dois valores inteiros (A e B) e efetuar as operações de adição,
+            subtração e multiplicação entre os valores lidos. Apresente no final os valores lidos e os resultados
+            obtidos.
+        </p>
+
+        <form name="form" class="conteudo">
+            
+            <label for="valorA">Valor A:</label>
+            <input type="text" name="valorA" id="valorA">
+
+            <label for="valorB">Valor B:</label>
+            <input type="text" name="valorB" id="valorB">
+
+            <button type="button" class="submit" onclick="areaResultado()">Calcular</button>
+
+        </form>
+        
+        <br>
+
+        <div class="resultado" id="resultado" style="display: none;">
+
+           <span class="valorA"></span> + <span class="valorB"></span> = <span id="adicao"></span>
+           <br>
+           <span class="valorA"></span> - <span class="valorB"></span> = <span id="subtracao"></span>
+           <br>
+           <span class="valorA"></span> * <span class="valorB"></span> = <span id="multiplicacao"></span>
+
+        </div>
+
+        <br>
+
+    </div>
+    
+</body>
+</html>
