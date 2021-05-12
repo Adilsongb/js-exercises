@@ -19,43 +19,47 @@
 
     <div class="container">
 
-        <br>
-        <a class="botao botao2" href="../index.html">Voltar</a>
-        <h1>Exercício 1</h1>
+        <div class="conteudo">
 
-        <p>Elaborar um algoritmo para calcular a média aritmética de duas notas escolares de um aluno e
-        escrever as notas e a média calculada.</p>
+            <br>
+            <a class="botao botao2" href="../index.html">Voltar</a>
+            <h1>Exercício 1</h1>
 
-        <form name="form" class="conteudo">
+            <p>Elaborar um algoritmo para calcular a média aritmética de duas notas escolares de um aluno e
+            escrever as notas e a média calculada.</p>
+
+            <form name="form" class="conteudo">
+                
+                <label for="nota1">Primeira nota:</label>
+                <input type="text" name="nota1" id="nota1">
+
+                <label for="nota2">Segunda nota:</label>
+                <input type="text" name="nota2" id="nota2">
+
+                <button type="button" class="submit" onclick="areaResultado()">Calcular</button>
+
+            </form>
             
-            <label for="nota1">Primeira nota:</label>
-            <input type="text" name="nota1" id="nota1">
+            <br>
 
-            <label for="nota2">Segunda nota:</label>
-            <input type="text" name="nota2" id="nota2">
+            <table id="tabelaResult" style="width: 25%; margin: auto; display: none;">
+                <tr>
+                    <th>Primeira nota</th>
+                    <td id="dado1">0</td>
+                </tr>
+                <tr>
+                    <th>Segunda nota</th>
+                    <td id="dado2">0</td>
+                </tr>
+                <tr>
+                    <th>Média</th>
+                    <td id="dado3">0</td>
+                </tr>
+            </table>
+            
+            <br>
 
-            <button type="button" class="submit" onclick="areaResultado()">Calcular</button>
-
-        </form>
-        
-        <br>
-
-        <table id="tabelaResult" style="width: 25%; margin: auto; display: none;">
-            <tr>
-                <th>Primeira nota</th>
-                <td id="dado1">0</td>
-            </tr>
-            <tr>
-                <th>Segunda nota</th>
-                <td id="dado2">0</td>
-            </tr>
-            <tr>
-                <th>Média</th>
-                <td id="dado3">0</td>
-            </tr>
-        </table>
-        
-        <br>
+        </div>
 
     </div>
     
