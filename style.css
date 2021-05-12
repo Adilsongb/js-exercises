@@ -38,10 +38,18 @@ div.conteudo {
 
 }
 
-div.conteudo h2 {
+.link-pdf {
 
-    color: #202020;
-    display: inline-block;
+    text-decoration: none;
+    color: #3a3a3a;
+    
+    transition: 0.35s;
+
+}
+
+.link-pdf:hover {
+
+    color: #ff3838;
 
 }
 
