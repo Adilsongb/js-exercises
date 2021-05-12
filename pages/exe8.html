@@ -102,85 +102,89 @@
 
     <div class="container">
 
-        <br>
-        <a class="botao botao2" href="../index.html">Voltar</a>
-        <h1>Exercício 8</h1>
+        <div class="conteudo">
 
-        <p>
-            Preparar um algoritmo para ler a quantidade de itens comprados e calcular e apresentar a conta do
-            cliente.
-        </p>
+            <br>
+            <a class="botao botao2" href="../index.html">Voltar</a>
+            <h1>Exercício 8</h1>
 
-        <ul>
-            <li>1 Hambúrguer = R$ 12,50</li>
-            <li>1 Cheeseburguer = R$ 13,30</li>
-            <li>1 MilkShake = R$ 8,00</li>
-            <li>1 Refrigerante = R$ 5,00</li>
-        </ul>
+            <p>
+                Preparar um algoritmo para ler a quantidade de itens comprados e calcular e apresentar a conta do
+                cliente.
+            </p>
 
-        <table id="pedido">
-            <tr>
-                <th id="titulo" colspan="4">Faça o seu pedido</th>
-            </tr>
-            <tr>
-                <th>Hambúrguer</th>
-                <td>
-                    <button type="button" class="botaoCard" id="retirarBotaoH" style="visibility: hidden;" onclick="retirarItem(1)">-</button>
-                </td>
-                <td>
-                    <span id="quantidadeH">0</span>
-                </td>
-                <td>
-                    <button type="button" class="botaoCard" onclick="addItem(1)" >+</button>
-                </td>
-            </tr>
-            <tr>
-                <th>Cheeseburguer</th>
-                <td>
-                    <button type="button" class="botaoCard" id="retirarBotaoC" style="visibility: hidden;" onclick="retirarItem(2)">-</button>
-                </td>
-                <td>
-                    <span id="quantidadeC">0</span>
-                </td>
-                <td>
-                    <button type="button" class="botaoCard" onclick="addItem(2)" >+</button>
-                </td>
-            </tr>
-            <tr>
-                <th>MilkShake</th>
-                <td>
-                    <button type="button" class="botaoCard" id="retirarBotaoM" style="visibility: hidden;" onclick="retirarItem(3)">-</button>
-                </td>
-                <td>
-                    <span id="quantidadeM">0</span>
-                </td>
-                <td>
-                    <button type="button" class="botaoCard" onclick="addItem(3)" >+</button>
-                </td>
-            </tr>
-            <tr>
-                <th>Refrigerante</th>
-                <td>
-                    <button type="button" class="botaoCard" id="retirarBotaoR" style="visibility: hidden;" onclick="retirarItem(4)">-</button>
-                </td>
-                <td>
-                    <span id="quantidadeR">0</span>
-                </td>
-                <td>
-                    <button type="button" class="botaoCard" onclick="addItem(4)" >+</button>
-                </td>
-            </tr>
-        </table>
+            <ul>
+                <li>1 Hambúrguer = R$ 12,50</li>
+                <li>1 Cheeseburguer = R$ 13,30</li>
+                <li>1 MilkShake = R$ 8,00</li>
+                <li>1 Refrigerante = R$ 5,00</li>
+            </ul>
 
-        <button class="botaoEnviar" style="margin: 10px auto; display: block;" onclick="calcularTotal()">Enviar pedido</button>
+            <table id="pedido">
+                <tr>
+                    <th id="titulo" colspan="4">Faça o seu pedido</th>
+                </tr>
+                <tr>
+                    <th>Hambúrguer</th>
+                    <td>
+                        <button type="button" class="botaoCard" id="retirarBotaoH" style="visibility: hidden;" onclick="retirarItem(1)">-</button>
+                    </td>
+                    <td>
+                        <span id="quantidadeH">0</span>
+                    </td>
+                    <td>
+                        <button type="button" class="botaoCard" onclick="addItem(1)" >+</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Cheeseburguer</th>
+                    <td>
+                        <button type="button" class="botaoCard" id="retirarBotaoC" style="visibility: hidden;" onclick="retirarItem(2)">-</button>
+                    </td>
+                    <td>
+                        <span id="quantidadeC">0</span>
+                    </td>
+                    <td>
+                        <button type="button" class="botaoCard" onclick="addItem(2)" >+</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th>MilkShake</th>
+                    <td>
+                        <button type="button" class="botaoCard" id="retirarBotaoM" style="visibility: hidden;" onclick="retirarItem(3)">-</button>
+                    </td>
+                    <td>
+                        <span id="quantidadeM">0</span>
+                    </td>
+                    <td>
+                        <button type="button" class="botaoCard" onclick="addItem(3)" >+</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Refrigerante</th>
+                    <td>
+                        <button type="button" class="botaoCard" id="retirarBotaoR" style="visibility: hidden;" onclick="retirarItem(4)">-</button>
+                    </td>
+                    <td>
+                        <span id="quantidadeR">0</span>
+                    </td>
+                    <td>
+                        <button type="button" class="botaoCard" onclick="addItem(4)" >+</button>
+                    </td>
+                </tr>
+            </table>
 
-        <div class="resultado" id="resultado" style="display: none;">
+            <button class="botaoEnviar" style="margin: 10px auto; display: block;" onclick="calcularTotal()">Enviar pedido</button>
 
-            Total a pagar: R$ <span id="result"></span>
- 
+            <div class="resultado" id="resultado" style="display: none;">
+
+                Total a pagar: R$ <span id="result"></span>
+    
+            </div>
+
+            <br>
+
         </div>
-
-        <br>
 
     </div>
     

@@ -19,33 +19,37 @@
 
     <div class="container">
 
-        <br>
-        <a class="botao botao2" href="../index.html">Voltar</a>
-        <h1>Exercício 5</h1>
+        <div class="conteudo">
 
-        <p>
-            Crie um algoritmo que realize a conversão de medidas em milímetros (mm) para polegadas
-            (p), considerando que 1 polegada tem 25,4 milímetros.
-        </p>
+            <br>
+            <a class="botao botao2" href="../index.html">Voltar</a>
+            <h1>Exercício 5</h1>
 
-        <form name="form" class="conteudo">
+            <p>
+                Crie um algoritmo que realize a conversão de medidas em milímetros (mm) para polegadas
+                (p), considerando que 1 polegada tem 25,4 milímetros.
+            </p>
+
+            <form name="form" class="conteudo">
+                
+                <label for="tempC">Medida em milímetro (mm):</label>
+                <input type="text" name="mm" id="mm">
+
+                <button type="button" class="submit" onclick="areaResultado()">Calcular</button>
+
+            </form>
             
-            <label for="tempC">Medida em milímetro (mm):</label>
-            <input type="text" name="mm" id="mm">
+            <br>
 
-            <button type="button" class="submit" onclick="areaResultado()">Calcular</button>
+            <div class="resultado" id="resultado" style="display: none;">
 
-        </form>
-        
-        <br>
+            <span id="areaResult1"></span> mm = <span id="areaResult2"></span> "
 
-        <div class="resultado" id="resultado" style="display: none;">
+            </div>
 
-           <span id="areaResult1"></span> mm = <span id="areaResult2"></span> "
+            <br>
 
         </div>
-
-        <br>
 
     </div>
     

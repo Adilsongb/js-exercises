@@ -19,36 +19,40 @@
 
     <div class="container">
 
-        <br>
-        <a class="botao botao2" href="../index.html">Voltar</a>
-        <h1>Exercício 3</h1>
+        <div class="conteudo">
 
-        <p>
-            Elaborar um algoritmo para calcular e apresentar o volume (V) de um cilindro, tendo como
-            valores informados o raio (R) e a altura (A). Utilize π = 3.14159 e V = πR<sup>2</sup>A para realizar o cálculo.
-        </p>
+            <br>
+            <a class="botao botao2" href="../index.html">Voltar</a>
+            <h1>Exercício 3</h1>
 
-        <form name="form" class="conteudo">
+            <p>
+                Elaborar um algoritmo para calcular e apresentar o volume (V) de um cilindro, tendo como
+                valores informados o raio (R) e a altura (A). Utilize π = 3.14159 e V = πR<sup>2</sup>A para realizar o cálculo.
+            </p>
+
+            <form name="form" class="conteudo">
+                
+                <label for="raio">Raio do cilindro:</label>
+                <input type="text" name="raio" id="raio">
+
+                <label for="altura">Altura do cilindro:</label>
+                <input type="text" name="altura" id="altura">
+
+                <button type="button" class="submit" onclick="areaResultado()">Calcular</button>
+
+            </form>
             
-            <label for="raio">Raio do cilindro:</label>
-            <input type="text" name="raio" id="raio">
+            <br>
 
-            <label for="altura">Altura do cilindro:</label>
-            <input type="text" name="altura" id="altura">
+            <div class="resultado" id="resultado" style="display: none;">
 
-            <button type="button" class="submit" onclick="areaResultado()">Calcular</button>
+            <strong>O volume do cilindro é: </strong> <span id="areaResult"></span>
 
-        </form>
-        
-        <br>
+            </div>
 
-        <div class="resultado" id="resultado" style="display: none;">
-
-           <strong>O volume do cilindro é: </strong> <span id="areaResult"></span>
+            <br>
 
         </div>
-
-        <br>
 
     </div>
     

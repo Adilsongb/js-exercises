@@ -19,39 +19,43 @@
 
     <div class="container">
 
-        <br>
-        <a class="botao botao2" href="../index.html">Voltar</a>
-        <h1>Exercício 7</h1>
+        <div class="conteudo">
 
-        <p>
-            Elaborar um algoritmo para efetuar o cálculo de uma prestação (p) em atraso, considerando o
-            valor (v) da prestação, o valor da taxa (tx) e o tempo (t) transcorrido. Utilize p=v+(v∗(tx/100)∗t)
-        </p>
+            <br>
+            <a class="botao botao2" href="../index.html">Voltar</a>
+            <h1>Exercício 7</h1>
 
-        <form name="form" class="conteudo">
+            <p>
+                Elaborar um algoritmo para efetuar o cálculo de uma prestação (p) em atraso, considerando o
+                valor (v) da prestação, o valor da taxa (tx) e o tempo (t) transcorrido. Utilize p=v+(v∗(tx/100)∗t)
+            </p>
+
+            <form name="form" class="conteudo">
+                
+                <label for="valorP">Valor da prestação:</label>
+                <input type="text" name="valorP" id="valorP">
+
+                <label for="valorTaxa">Valor da taxa:</label>
+                <input type="text" name="valorTaxa" id="valorTaxa">
+
+                <label for="tempo">Tempo transcorrido (meses):</label>
+                <input type="text" name="tempo" id="tempo">
+
+                <button type="button" class="submit" onclick="areaResultado()">Calcular</button>
+
+            </form>
             
-            <label for="valorP">Valor da prestação:</label>
-            <input type="text" name="valorP" id="valorP">
+            <br>
 
-            <label for="valorTaxa">Valor da taxa:</label>
-            <input type="text" name="valorTaxa" id="valorTaxa">
+            <div class="resultado" id="resultado" style="display: none;">
 
-            <label for="tempo">Tempo transcorrido (meses):</label>
-            <input type="text" name="tempo" id="tempo">
+            Valor da prestação em atraso: R$ <span id="result"></span>
 
-            <button type="button" class="submit" onclick="areaResultado()">Calcular</button>
+            </div>
 
-        </form>
-        
-        <br>
-
-        <div class="resultado" id="resultado" style="display: none;">
-
-           Valor da prestação em atraso: R$ <span id="result"></span>
+            <br>
 
         </div>
-
-        <br>
 
     </div>
     

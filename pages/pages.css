@@ -99,3 +99,22 @@ div.resultado {
     text-align: center;
 
 }
+
+
+@media screen and (max-width: 800px){
+
+    div.container {
+        
+        display: flex;
+        padding: 5px 0;
+
+    }
+
+    div.conteudo {
+
+        min-width: 95%;
+        padding: 5px 15px 5px 15px;
+
+    }
+
+}

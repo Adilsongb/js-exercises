@@ -19,41 +19,45 @@
 
     <div class="container">
 
-        <br>
-        <a class="botao botao2" href="../index.html">Voltar</a>
-        <h1>Exercício 6</h1>
+        <div class="conteudo">
 
-        <p>
-            Elaborar um algoritmo para ler dois valores inteiros (A e B) e efetuar as operações de adição,
-            subtração e multiplicação entre os valores lidos. Apresente no final os valores lidos e os resultados
-            obtidos.
-        </p>
+            <br>
+            <a class="botao botao2" href="../index.html">Voltar</a>
+            <h1>Exercício 6</h1>
 
-        <form name="form" class="conteudo">
+            <p>
+                Elaborar um algoritmo para ler dois valores inteiros (A e B) e efetuar as operações de adição,
+                subtração e multiplicação entre os valores lidos. Apresente no final os valores lidos e os resultados
+                obtidos.
+            </p>
+
+            <form name="form" class="conteudo">
+                
+                <label for="valorA">Valor A:</label>
+                <input type="text" name="valorA" id="valorA">
+
+                <label for="valorB">Valor B:</label>
+                <input type="text" name="valorB" id="valorB">
+
+                <button type="button" class="submit" onclick="areaResultado()">Calcular</button>
+
+            </form>
             
-            <label for="valorA">Valor A:</label>
-            <input type="text" name="valorA" id="valorA">
+            <br>
 
-            <label for="valorB">Valor B:</label>
-            <input type="text" name="valorB" id="valorB">
+            <div class="resultado" id="resultado" style="display: none;">
 
-            <button type="button" class="submit" onclick="areaResultado()">Calcular</button>
+            <span class="valorA"></span> + <span class="valorB"></span> = <span id="adicao"></span>
+            <br>
+            <span class="valorA"></span> - <span class="valorB"></span> = <span id="subtracao"></span>
+            <br>
+            <span class="valorA"></span> * <span class="valorB"></span> = <span id="multiplicacao"></span>
 
-        </form>
-        
-        <br>
+            </div>
 
-        <div class="resultado" id="resultado" style="display: none;">
-
-           <span class="valorA"></span> + <span class="valorB"></span> = <span id="adicao"></span>
-           <br>
-           <span class="valorA"></span> - <span class="valorB"></span> = <span id="subtracao"></span>
-           <br>
-           <span class="valorA"></span> * <span class="valorB"></span> = <span id="multiplicacao"></span>
+            <br>
 
         </div>
-
-        <br>
 
     </div>
     
