@@ -38,6 +38,13 @@ div.conteudo {
 
 }
 
+div.conteudo h2 {
+
+    color: #202020;
+    display: inline-block;
+
+}
+
 /* CONFIGURAÇÕES MOBILE RESPONSIVO */
 
 @media screen and (max-width: 1300px){
@@ -90,6 +97,12 @@ div.conteudo {
 
         min-width: 80%;
 
+    }
+
+    div.conteudo h2 {
+
+        margin-bottom: 5px;
+    
     }
 
 }
